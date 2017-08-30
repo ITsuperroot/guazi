@@ -1,0 +1,101 @@
+{% extends 'details/detail.html' %}
+{% block car %}
+    <div class="product-textbox">
+        <div class="titlebox">
+            <p>{{ car.title }}</p>
+            <span class="labels">降价急售</span>
+            <span class="labels">4s保养</span>
+            <span class="labels">{{ car.number }}过户</span>
+        </div>
+        <ul class="assort clearfix">
+            <li class="one">
+                <span>{{ car.car_license |date:"Y-m"}}
+                </span>上牌时间
+            </li>
+            <li class="two">
+                <span>{{ car.mileage }}
+                </span>表显里程
+            </li>
+            <li class="three">
+                <span>{{ car.address }}
+                </span>上牌地
+            </li>
+            <li class="four em-sta detailHoverTips js-detailHoverTips">
+                <span> {{ car.emission_standard }}
+                    <em class="tip-icon js-tip-icon1"></em>
+                    <span class="layer-tip bottom-layer js-layer-tip1" style="width:233px;height:43px;" id="layer-tip">
+                        <i class="icon-small-sanjiao"></i>各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。
+                    </span>
+                </span>
+                <a href="javascript:void(0)" class="js-diswaiqian" data-gzlog="tracking_type=click&eventid=0220050000099005">外迁查询
+                    <i class="icon-green-right7x11"></i>
+                </a>
+            </li>
+            <li class="last">
+                <span>{{ car.speed_changing_box }}
+                </span>变速箱
+            </li>
+        </ul>
+        <div class="pricebox js-disprice">
+            <i class="ico-type">车主报价：</i>
+            <span class="pricestype">¥{{ car.price }}
+                <span class="f14">万</span>
+            </span>
+            <span class="newcarprice">
+                新车指导价{{ car.discount }}万(含税)
+            </span>
+            <span class="tip-icon js-tip-icon3">
+                <span class="layer-tip bottom-layer js-layer-tip3" style="display:none">
+                    <i class="icon-small-sanjiao"></i>新车指导价(含税) = 厂商公布的指导价  + 购置税费，该价格仅供参考。
+                </span>
+            </span>
+        </div>
+        <div class="js-loan">
+            <a href="javascript:void();" class="loanbox" data-role="viewjr" source-id="2410186" city-domain="bj"
+                    data-gzlog="tracking_type=click&eventid=0460310000000073&carid=15589199">
+                <span class="icon-man"></span>
+                  首付 <span class="f22">5.37</span>万
+                <span class="monthpad">月供4599元</span>
+                <span class="text-r">贷款详情<i class="icon-green-right7x11"></i></span>
+            </a>
+        </div>
+        <div class="service-protect">
+            <div class="service-protect-title clearfix"><i class="icon-service">服务保障升级</i>
+                <i class="label-green">理赔高达6.12万</i><i class="label-green">保全车12大系统</i>
+                <a class="look-detail" target="_blank" href="/zq_serviceintro/?domain=bj&isEnsure=1&compensation=6.12&serviceUpgrade=1">查看详情<i class="icon-gray-right7x11"></i>
+                </a>
+            </div>
+            <ul class="four-service clearfix">
+                <li class="one">
+                    <span>1年2万公里售后保障<i class="icon-triangle-top"></i>
+                    </span>
+                </li>
+                <li class="two">
+                    <span>14天可退<i class="icon-triangle-top"></i></span>
+                </li>
+                <li class="three">
+                    <span>259项检测<i class="icon-triangle-top"></i></span>
+                </li>
+                <li class="four">
+                    <span>优质个人车<i class="icon-triangle-top"></i></span>
+                </li>
+            </ul>
+            <div class="car-fuwu"><i class="ico-txt">服务费：</i><span> {{ car1 }}元（车价x4%，最低3500元） </span>
+            </div>
+        </div>
+        <div class="btnbox clearfix">
+            <a rel="nofollow" href="javascript:" class="orgbtn js-apt" data-gzlog="tracking_type=click&eventid=0460310000000074&carid=15589199">预约看车
+                <span class="layer-tip js-layer-tip" style="width:233px;height:43px;display:none">
+                    <i class="icon-small-sanjiao"></i>
+                    此车已有<i class="fc-green">29</i>人关注，预计很快售出，建议尽快<i class="fc-green js-apt" data-gzlog="tracking_type=click&eventid=0460310000000074&carid=15589199">预约看车</i>
+                </span>
+            </a>
+            <a rel="nofollow" href="javascript:" class="greenbtn js-bargain" data-gzlog="tracking_type=click&eventid=0460310000000075&carid=15589199">我要砍价</a>
+            <a href="javascript:;" class="freephonebtn js-freePhone">免费咨询</a>
+        </div>
+            </div>    <!-- 详情页右上方车源基本信息-->
+
+
+
+
+{% endblock %}
